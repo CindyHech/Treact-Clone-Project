@@ -683,5 +683,52 @@ input:focus {
 }
 
 
+/* CTA */
 
+#cta {
+ background-color: rgb(100, 21, 255);
+ border-radius: 8px;
+ margin: 96px; 
+}
 
+.cta__row {
+ width: 100%;
+ max-width: 1000px;
+ margin: 24px auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 36px;
+}
+
+.cta__title {
+ color: #fff;
+ width: 50%;
+ font-size: 28px; 
+}
+
+.cta__btn--wrapper {
+ display: flex;
+ gap: 32px;
+}
+
+.cta__btn--red {
+ background-color: #f56565;
+ padding: 16px 32px; 
+}
+
+.cta__btn--purple {
+ border: 1px solid #fff;  
+ padding: 16px 32px; 
+}
+
+.cta__btn--red:hover {
+  background-color: rgb(229, 62, 62);
+}
+
+.cta__btn--purple:hover {
+  color: rgb(100, 21, 255);
+  background-color: #fff;
+}
+
+ 
