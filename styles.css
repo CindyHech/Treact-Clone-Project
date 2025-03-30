@@ -18,7 +18,7 @@ a {
 }
 
 .container {
- padding: 80px 0;
+ padding: 113px 0;
 }
 
 .row {
@@ -46,6 +46,103 @@ a {
  cursor: pointer;    
 }
 
+/* BURGER MENU  */
+
+.btn__menu {
+ background-color: transparent;
+ border: none;
+ font-size: 24px;
+ color: #243e63;
+ display: none;
+}
+
+.menu__backdrop {
+ position: absolute;
+ background-color: #fff;
+ border: 1px solid gray;
+ border-radius: 10px;
+ top: 4%;
+ left: 2%;
+ right: 2%;
+ bottom: 55%;
+ display: flex;
+ justify-content: center;
+ z-index: 3; 
+ opacity: 0;
+ visibility: hidden;
+}
+
+.menu--open .menu__backdrop{
+ visibility: visible;
+ opacity: 1;
+ animation: slide-in 400ms 100ms backwards;
+}
+
+@keyframes slide-in {
+  0% {
+   transform: translateX(110%) ; 
+  } 
+
+  33% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+   transform: translateX(0 ); 
+  }
+}
+
+
+.menu--open {
+ max-height: 100vh;
+ overflow-y: hidden;
+}
+
+.menu__links {
+ padding: 12px; 
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 24px;
+}
+
+.menu__link {
+ font-size: 20px;
+ font-weight: 600;
+ color: #1a202c; 
+}
+
+.menu__link:hover {
+ color: #6415ff;
+ cursor: pointer;
+ text-decoration: underline;
+ text-underline-offset: 10px;
+ text-decoration-color: #6415ff;
+ text-decoration-thickness: 2px;
+}
+
+.menu__list--primary {
+  margin-top: 12px;
+}
+
+.btn__menu--close {
+ position: absolute; 
+ top: 0;
+ right: 10px;
+ color: #243e63;
+ padding: 8px;
+}
+
+.btn__menu--close:hover 
+.btn__menu:hover
+{
+ color: #6415ff;
+ cursor: pointer;
+
+}
+
+
+
 
 /* Navigation */
 
@@ -54,7 +151,7 @@ a {
 }
 
 
-.nav__container{
+.nav__content {
  height: 120px;
  display: flex;
  align-items: center;
@@ -113,6 +210,7 @@ a {
 .nav__link--primary:hover {
     background-color: #4108b4; 
     color: white;
+    text-decoration: none;
 }
 
 .link__hover-effect:after {
@@ -219,6 +317,7 @@ input:focus {
  align-items: center;
  text-align: center;
  margin-bottom: 48px;
+ margin-top: 96px;
 }
 
 .section__title {
@@ -818,8 +917,6 @@ footer{
  background-color: rgb(203 213 224); 
 }
 
-
-
 .facebook {
 padding: 8px 10px;
 }
@@ -828,6 +925,33 @@ padding: 8px 10px;
  padding: 8px 10px; 
 }
 
+/* RESPONSIVENESS */
+
+@media (max-width: 1280px) {
+ .header__container{
+   padding: 0 24px;
+ }
+
+ .header__description--title {
+   font-size: 36px;
+ }
+
+ .header__description--para {
+   font-size: 16px;
+ }
+}
+
+@media (max-width: 1024px) {
+  .btn__menu{
+   display: block;
+  }
+  
+  .nav__link {
+   display: none;
+  }
+
+
+}
 
 
 
